@@ -7,6 +7,9 @@ The API should support the following requests:
 #### `GET /characters`
 #### `GET /characters/:id`
 
+### API Documentation
+For Swagger Documentation:
+#### `http://localhost:8080/api-docs`
 
 ### How to run
 Make sure node is installed on your PC. This App is built with Node version (14.6.1)
