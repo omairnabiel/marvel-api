@@ -4,17 +4,23 @@ import "./env.js"
 import express from "express"
 import cors from "cors"
 import nodeCron from "node-cron"
+import { serve, setup } from "swagger-ui-express"
+import swaggerJsDoc from "swagger-jsdoc"
 
 import CharacterController from "./controllers/character.controller.js"
 import { CharacterService } from "./services/character.service.js"
 import { errorHandlerMiddleware } from './middlewares/error_handler.js'
-
+import { options } from "./docs/swagger.js"
 
 const app = express()
 
 const PORT = process.env.PORT || 8080
 
 app.use(cors())
+
+// setup swagger api docs'
+const specs = await swaggerJsDoc(options)
+app.use('/api-docs', serve, setup(specs))
 
 app.use("/", CharacterController)
 
