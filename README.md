@@ -15,16 +15,16 @@ Take clone of this repo on your local machine
 
 First install all the dependencies with the following command
 
-- npm install
+`- npm install`
 
 In order to run the app first you need to have `.env` file. Make sure to download it and place it in the
 root folder of this app (along side package.json)
 
 To start the server run the following command
-- npm run dev 
+`- node ./app.js` 
 
-  OR 
+  OR to run in dev environment with nodemon, use the following
 
-- node ./app.js
+`- npm run dev`
 
 The server runs on localhost:8080
