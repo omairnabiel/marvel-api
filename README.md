@@ -24,7 +24,7 @@ In order to run the app first you need to have `.env` file. Make sure to downloa
 root folder of this app (along side package.json)
 
 To start the server run the following command
-`- node ./app.js` 
+`- node ./server.js` 
 
   OR to run in dev environment with nodemon, use the following
 

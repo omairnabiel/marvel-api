@@ -1,14 +1,14 @@
 import express from 'express'
 
 import { BASE_URL } from "../config.js"
-import { HttpFactory } from "../libs/http/http_factory.js"
-import { CacheFactory }  from "../libs/cache/cache_factory.js"
+import { Http } from "../libs/http/index.js"
+import { Cache }  from "../libs/cache/index.js"
 import { CharacterService } from "../services/character.service.js"
 import { requestHandler } from '../utils/request_handler.js'
 
 const router = express.Router()
-const http = new HttpFactory('axios')
-const cache = new CacheFactory('local')
+const http = new Http()
+const cache = new Cache()
 
 // create a CharacterService instance with dependencies injected
 const characterService = new CharacterService(http, cache, BASE_URL)

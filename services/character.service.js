@@ -24,11 +24,7 @@ export class CharacterService extends BaseService {
     async getCharacterById(id){
         try {
             const character = await this.http.get(`${this.baseUrl}/characters/${id}`)
-            
-            if(!Object.keys(character).length === 0) {
-                throw new ApiError(404,`Character with id:${id} doesn't exist`)
-            }
-
+ 
             const { id: characterId, name, description } = character.data.data.results[0]
             return {
                 id: characterId,

@@ -14,8 +14,6 @@ import { options } from "./docs/swagger.js"
 
 const app = express()
 
-const PORT = process.env.PORT || 8080
-
 app.use(cors())
 
 // setup swagger api docs'
@@ -34,6 +32,5 @@ nodeCron.schedule(' 0 0 */12 * * *', async function(){
 
 app.use(errorHandlerMiddleware)
 
-app.listen(PORT,() => {
-    console.log(`Node server running on localhost:${PORT}`)
-})
+export default app
+
