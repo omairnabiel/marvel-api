@@ -30,4 +30,9 @@ To start the server run the following command
 
 `- npm run dev`
 
+### Tests
+To run tests use the following command:
+
+`- npm run test`
+
 The server runs on localhost:8080
